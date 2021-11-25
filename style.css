@@ -15,7 +15,7 @@ body{
     font-size: 30px;
     background-color: rgb(43, 41, 41);
     color: white;
-    width: 250px;
+    width: 333px;
     height: 67px;
 }
 
@@ -26,12 +26,41 @@ body{
     grid-auto-rows: minmax(67px, auto)
 }
 
+button.operator{
+    height: 67px
+}
+
 .operators{
-    display: grid;
-    width: 250px;
-    height: 133.4px;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-direction: column;
+    width: 83px;
+    flex: 1;
+
     
+}
+button.operators{
+    background-color: blue;
+}
+.actions{
+    display: flex;
+    height: 67px;
+    width: 333px;
+    
+}
+button#equals{
+  
+    width: 111px;
+}
+button#clear{
+    width: 111px;
+}
+button#backspace{
+    width: 111px;
+
+}
+
+.first{
+    display: flex;
 }
 
 #zero{

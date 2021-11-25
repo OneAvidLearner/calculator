@@ -98,6 +98,14 @@ const clearAll = function(){
     screen.textContent = '';
     args =[];
 }
+
+const remove = function(){
+    let copy = screen.textContent.split('');
+    copy.pop();
+    screen.textContent=copy.join('');
+    args.pop();
+}
+
 function main (){
     const numbers = document.querySelectorAll('.number');
     numbers.forEach(numbers => numbers.addEventListener('click', display))
@@ -113,6 +121,9 @@ function main (){
 
     const dot = document.querySelector('#dot');
     dot.addEventListener('click',decimal);
+
+    const deleteLast = document.querySelector('#backspace');
+    deleteLast.addEventListener('click', remove);
 }
 
 let args = [];
