@@ -32,7 +32,6 @@ const operate = function(arr1){
     if (arr.length==1){
         return arr[0];
     }
-    console.log(arr[0])
     switch (true){
         case arr1.some(n=> n == '+'):
             return add(arr[0], arr[1]);
@@ -72,10 +71,8 @@ const operator = function(){
 }
 
 const calculate = function(){
-    console.log(args)
     screen.textContent = operate(args);
 
-    console.log(operate(args))
    
 
 }
@@ -88,7 +85,6 @@ const countDecimals = function (value) {
 
 const decimal = function(){
     let copy = screen.textContent.split(/\+|\-|\/|\*/)
-    console.log(copy);
     if(copy[1]){
         if(!copy[1].split('').some(n=> n=='.')){
             screen.textContent = screen.textContent + this.textContent;
