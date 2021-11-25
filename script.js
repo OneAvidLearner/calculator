@@ -47,10 +47,7 @@ const screen = document.querySelector('.screen')
 const display = function(){
     
     screen.textContent = screen.textContent + this.textContent;
-    
     args.push(this.textContent);
-
-
 }
 
 const operator = function(){
@@ -76,6 +73,14 @@ const calculate = function(){
 
 }
 
+const decimal = function(){
+    if(!screen.textContent.split('').some(n=> n=='.')){
+        screen.textContent = screen.textContent + this.textContent;
+        args.push(this.textContent);
+    }
+    
+}
+
 const clearAll = function(){
     screen.textContent = '';
     args =[];
@@ -85,13 +90,16 @@ function main (){
     numbers.forEach(numbers => numbers.addEventListener('click', display))
 
     const operators = document.querySelectorAll('.operator');
-    operators.forEach(operators => operators.addEventListener('click',operator))
+    operators.forEach(operators => operators.addEventListener('click',operator));
 
     const equal = document.querySelector('#equals');
     equal.addEventListener('click', calculate);
 
     const clear = document.querySelector('#clear');
-    clear.addEventListener('click', clearAll )
+    clear.addEventListener('click', clearAll );
+
+    const dot = document.querySelector('#dot');
+    dot.addEventListener('click',decimal);
 }
 
 let args = [];
