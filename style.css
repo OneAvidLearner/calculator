@@ -29,7 +29,7 @@ body{
 .operators{
     display: grid;
     width: 250px;
-    height: 67px;
+    height: 133.4px;
     grid-template-columns: repeat(3,1fr);
     
 }

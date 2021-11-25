@@ -1,4 +1,5 @@
 const add = function(num1, num2) {
+    
     return num1+num2;
 };
 
@@ -10,11 +11,17 @@ const divide = function(num1, num2) {
     if(num2==0){
         return 'Divided by zero?'
     }
-    return num1/num2;
+    else if (countDecimals(num1/num2)){
+        return (num1/num2).toFixed(3)
+    }
+    else return num1/num2;
 }
 
 const multiply = function(num1, num2) { 
-    return num1*num2;
+    if (countDecimals(num1*num2)){
+        return (num1*num2).toFixed(3)
+    }
+    else return num1*num2;
 
 };
 
@@ -71,6 +78,12 @@ const calculate = function(){
     console.log(operate(args))
    
 
+}
+
+const countDecimals = function (value) { 
+    if ((value % 1) != 0) 
+        return value.toString().split(".")[1].length;  
+    return 0;
 }
 
 const decimal = function(){
