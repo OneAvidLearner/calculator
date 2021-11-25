@@ -15,9 +15,9 @@ body{
     font-size: 30px;
     background-color: rgb(43, 41, 41);
     color: white;
-    width: 343px;
+    width: 333px;
     height: 67px;
-    border: 15px solid black;
+    border: 10px solid black;
 }
 
 .numbers {
@@ -39,11 +39,8 @@ button.operator{
     flex-direction: column;
     width: 83px;
     flex: 1;
-
     
-}
-button.operators{
-    background-color: blue;
+    
 }
 .actions{
     display: flex;
@@ -52,13 +49,13 @@ button.operators{
     
 }
 button#equals{
-    width: 111px;
+    width: 167px;
 }
 button#clear{
-    width: 111px;
+    width: 83px;
 }
 button#backspace{
-    width: 111px;
+    width: 83px;
 
 }
 
