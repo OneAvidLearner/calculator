@@ -1,6 +1,6 @@
 const add = function(num1, num2) {
     
-    return num1+num2;
+    return parseFloat(num1)+ parseFloat(num2);
 };
 
 const subtract = function(num1,num2) { 
@@ -102,7 +102,7 @@ const clearAll = function(){
 const remove = function(){
     let copy = screen.textContent.split('');
     copy.pop();
-    screen.textContent=copy.join('');
+    screen.textContent = copy.join('');
     args.pop();
 }
 
