@@ -1,0 +1,41 @@
+header{
+    font-size: xx-large;
+
+}
+
+
+body{
+    background-color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen {
+    font-size: 30px;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    width: 250px;
+    height: 67px;
+}
+
+.numbers {
+    display: grid;
+    width: 250px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(67px, auto)
+}
+
+.operators{
+    display: grid;
+    width: 250px;
+    height: 67px;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+#zero{
+    grid-column:1/span 3;
+    
+}
+
