@@ -87,7 +87,16 @@ const countDecimals = function (value) {
 }
 
 const decimal = function(){
-    if(!screen.textContent.split('').some(n=> n=='.')){
+    let copy = screen.textContent.split(/\+|\-|\/|\*/)
+    console.log(copy);
+    if(copy[1]){
+        if(!copy[1].split('').some(n=> n=='.')){
+            screen.textContent = screen.textContent + this.textContent;
+            args.push(this.textContent);
+        }
+
+    }
+    else if(!screen.textContent.split('').some(n=> n=='.')){
         screen.textContent = screen.textContent + this.textContent;
         args.push(this.textContent);
     }
