@@ -113,7 +113,9 @@ const remove = function(){
 
 function main (){
     const numbers = document.querySelectorAll('.number');
-    numbers.forEach(numbers => numbers.addEventListener('click', display))
+    numbers.forEach(numbers => numbers.addEventListener('click', display));
+
+    
 
     const operators = document.querySelectorAll('.operator');
     operators.forEach(operators => operators.addEventListener('click',operator));
@@ -129,6 +131,13 @@ function main (){
 
     const deleteLast = document.querySelector('#backspace');
     deleteLast.addEventListener('click', remove);
+
+    document.addEventListener('keydown',function(e){
+        if(document.querySelector(`[data-number="${e.key}"]`)){
+            document.querySelector(`[data-number="${e.key}"]`).click()
+        }
+        
+    });
 }
 
 let args = [];

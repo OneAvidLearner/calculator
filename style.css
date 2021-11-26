@@ -17,7 +17,7 @@ body{
     color: white;
     width: 333px;
     height: 67px;
-    border: 10px solid black;
+    border: 5px solid black;
 }
 
 .numbers {
@@ -27,7 +27,7 @@ body{
     grid-auto-rows: minmax(67px, auto)
 }
 .buttons{
-    border: 10px solid grey;
+    border: 5px solid grey;
 }
 
 button.operator{
